@@ -1,89 +1,76 @@
 
 import { Button } from '@/components/ui/button';
-import { AnimatedImage } from './AnimatedImage';
 import { FadeIn } from './FadeIn';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative pt-24 pb-16 overflow-hidden">
-      {/* Background element */}
-      <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-gradient-to-bl from-blue-50 to-transparent rounded-bl-full opacity-70" />
-      </div>
-      
-      <div className="container mx-auto px-4 pt-10 sm:pt-20 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left column - Text content */}
-          <div className="space-y-8 max-w-lg mx-auto lg:mx-0">
-            <FadeIn delay={100}>
-              <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-blue-600 uppercase bg-blue-50 rounded-full">
-                Modern Solutions
-              </span>
-            </FadeIn>
-            
-            <FadeIn delay={200}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-primary text-balance">
-                Transforming Ideas into Digital Reality
+    <section id="home" className="relative pt-16 overflow-hidden">
+      {/* Full width hero image */}
+      <div className="w-full h-[600px] relative">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: 'url(/lovable-uploads/a65f08fa-0022-4f78-97ce-03a8255dba93.png)', 
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+        
+        {/* Centered text overlay */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center">
+            <FadeIn delay={300}>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6">
+                えもび旅の1日
               </h1>
             </FadeIn>
             
-            <FadeIn delay={300}>
-              <p className="text-lg text-muted-foreground">
-                We create innovative digital experiences that connect brands with their audiences through thoughtful design and cutting-edge technology.
-              </p>
-            </FadeIn>
-            
             <FadeIn delay={400}>
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <div className="mt-8">
+                <Button size="lg" className="rounded-full px-8 bg-white/90 text-gray-900 hover:bg-white">
+                  詳しく見る
+                </Button>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </div>
+      
+      {/* Content below hero */}
+      <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <FadeIn delay={200}>
+            <div className="space-y-6 max-w-lg">
+              <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-gray-700 uppercase bg-gray-100 rounded-full">
+                採用情報
+              </span>
+              
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-primary">
+                人材を募集しています
+              </h2>
+              
+              <p className="text-lg text-gray-600">
+                私たちは常に情熱的で創造的な人材を求めています。チームに参加して、お客様の期待を超える素晴らしい体験を一緒に創りましょう。
+              </p>
+              
+              <div className="pt-6">
                 <Button size="lg" className="rounded-full px-8">
-                  Get Started
-                </Button>
-                <Button size="lg" variant="outline" className="rounded-full px-8">
-                  Learn More
+                  採用情報を見る
                 </Button>
               </div>
-            </FadeIn>
-            
-            <FadeIn delay={500} className="pt-6">
-              <div className="flex items-center space-x-6">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div 
-                      key={i}
-                      className="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-gray-200"
-                    />
-                  ))}
-                </div>
-                <div className="text-sm">
-                  <span className="font-semibold">4.9/5</span>
-                  <span className="text-muted-foreground"> from over 2,000 reviews</span>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
           
-          {/* Right column - Image */}
-          <div className="relative lg:h-[600px] flex items-center justify-center">
-            <FadeIn 
-              direction="left" 
-              delay={300} 
-              className="w-full max-w-md mx-auto"
-            >
-              <div className="relative">
-                <AnimatedImage
-                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1500&q=80"
-                  alt="Digital Innovation"
-                  className="rounded-2xl shadow-2xl"
-                  priority={true}
-                  hoverAnimation="lift"
-                />
-                
-                {/* Decorative elements */}
-                <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-blue-100 rounded-full animate-float opacity-70" />
-                <div className="absolute -top-6 -right-6 w-16 h-16 bg-yellow-100 rounded-full animate-float opacity-70" style={{ animationDelay: '1s' }} />
-              </div>
-            </FadeIn>
-          </div>
+          <FadeIn direction="left" delay={300}>
+            <div className="relative rounded-xl overflow-hidden shadow-xl">
+              <img 
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1500&q=80" 
+                alt="チームワーク"
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+          </FadeIn>
         </div>
       </div>
     </section>

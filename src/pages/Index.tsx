@@ -6,6 +6,7 @@ import Features from '@/components/Features';
 import Services from '@/components/Services';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import DayInLife from '@/components/DayInLife';
 
 const Index = () => {
   // Smooth scroll implementation
@@ -37,8 +38,9 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Services />
         <Features />
+        <DayInLife />
+        <Services />
         <Contact />
       </main>
       <Footer />

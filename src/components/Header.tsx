@@ -23,10 +23,12 @@ export default function Header() {
   }, []);
   
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Features', href: '#features' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'えもびとは？', href: '#about' },
+    { name: 'What\'s new', href: '#news' },
+    { name: 'えもびの魅力', href: '#features' },
+    { name: 'えもび旅の1日', href: '#day' },
+    { name: 'お客様の声', href: '#testimonials' },
+    { name: '予約する', href: '#contact' },
   ];
   
   return (
@@ -35,45 +37,62 @@ export default function Header() {
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out backdrop-blur-sm',
         isScrolled 
           ? 'py-3 bg-white/90 shadow-sm' 
-          : 'py-5 bg-transparent'
+          : 'py-5 bg-white/80'
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center">
-            <span className="text-2xl font-semibold tracking-tight text-primary">
-              eMobi
-            </span>
-          </a>
-          
+        <div className="flex items-center justify-center">
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {navLinks.slice(0, 3).map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                className="text-sm font-medium text-gray-700 transition-colors hover:text-primary"
               >
                 {link.name}
               </a>
             ))}
-            <Button size="sm" className="rounded-full px-6">
-              Get Started
-            </Button>
+            
+            {/* Logo */}
+            <a href="#" className="flex items-center mx-8">
+              <span className="text-3xl font-semibold tracking-tight text-primary mr-1">
+                E
+              </span>
+              <span className="text-2xl font-medium tracking-tight text-primary">
+                mobi
+              </span>
+            </a>
+            
+            {navLinks.slice(3).map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-gray-700 transition-colors hover:text-primary"
+              >
+                {link.name}
+              </a>
+            ))}
           </nav>
           
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden flex items-center"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-primary" />
-            ) : (
-              <Menu className="h-6 w-6 text-primary" />
-            )}
-          </button>
+          <div className="md:hidden flex items-center justify-between w-full">
+            <a href="#" className="flex items-center">
+              <span className="text-2xl font-semibold tracking-tight text-primary">
+                Emobi
+              </span>
+            </a>
+            <button
+              className="flex items-center"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6 text-primary" />
+              ) : (
+                <Menu className="h-6 w-6 text-primary" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
       
@@ -96,7 +115,7 @@ export default function Header() {
             </a>
           ))}
           <Button className="w-full rounded-full justify-center mt-4">
-            Get Started
+            お問い合わせ
           </Button>
         </nav>
       </div>
