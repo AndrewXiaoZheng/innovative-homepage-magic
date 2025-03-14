@@ -22,7 +22,7 @@ const features = [
   },
   {
     title: 'Security',
-    description: 'Best-in-class protection for your data and your users' information.',
+    description: 'Best-in-class protection for your data and your users\' information.',
     icon: '🔒',
   },
 ];
