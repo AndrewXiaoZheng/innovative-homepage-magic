@@ -2,11 +2,12 @@
 import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import Features from '@/components/Features';
+import About from '@/components/About';
 import Services from '@/components/Services';
+import Flow from '@/components/Flow';
+import Features from '@/components/Features';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import DayInLife from '@/components/DayInLife';
 
 const Index = () => {
   // Smooth scroll implementation
@@ -38,9 +39,10 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Features />
-        <DayInLife />
+        <About />
         <Services />
+        <Flow />
+
         <Contact />
       </main>
       <Footer />

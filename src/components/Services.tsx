@@ -2,24 +2,7 @@
 import { FadeIn } from './FadeIn';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-
-const services = [
-  {
-    title: 'Web Development',
-    description: 'Custom websites and progressive web applications built with modern frameworks and best practices.',
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80',
-  },
-  {
-    title: 'Mobile Applications',
-    description: 'Native and cross-platform mobile apps that deliver exceptional user experiences on any device.',
-    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&q=80',
-  },
-  {
-    title: 'UI/UX Design',
-    description: 'User-centered design solutions that combine aesthetics with functionality for optimal results.',
-    image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=600&q=80',
-  },
-];
+import { ArrowRight } from 'lucide-react';
 
 export default function Services() {
   return (
@@ -28,60 +11,42 @@ export default function Services() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <FadeIn>
             <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-blue-600 uppercase bg-blue-50 rounded-full">
-              Our Services
+              Service
             </span>
           </FadeIn>
           
           <FadeIn delay={100}>
             <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl text-primary">
-              Comprehensive Digital Solutions
+              人材紹介サービス
             </h2>
           </FadeIn>
-          
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           <FadeIn delay={200}>
-            <p className="mt-4 text-lg text-muted-foreground">
-              We offer a range of services to help businesses thrive in the digital landscape, from concept to launch and beyond.
-            </p>
+            <Card className="overflow-hidden h-full shadow-sm hover:shadow-md transition-shadow duration-300 p-8">
+              <h3 className="text-2xl font-semibold text-primary mb-4">企業様へ</h3>
+              <h4 className="text-xl font-medium text-gray-800 mb-3">幅広い求職者様の対応領域</h4>
+              <p className="text-gray-600 mb-6">
+                様々なサービスが複雑化する現代においてそのポジションにマッチした人材を採用する必要があります。
+                弊社ではエンジニアのオープンデータを保有してスカウトをかけたり、海外の学校と連携しグローバルな人材を紹介する等幅広く対応可能です。これまで上場企業や中小企業のクライアントからのご依頼もいただいております。
+              </p>
+
+            </Card>
+          </FadeIn>
+          
+          <FadeIn delay={300}>
+            <Card className="overflow-hidden h-full shadow-sm hover:shadow-md transition-shadow duration-300 p-8">
+              <h3 className="text-2xl font-semibold text-primary mb-4">求職者様へ</h3>
+              <h4 className="text-xl font-medium text-gray-800 mb-3">求人数の担保</h4>
+              <p className="text-gray-600 mb-6">
+                業界内での広範なネットワークを活かし、現在約8万件の求人情報を取り揃えています。求職者の皆様にとって、選択肢が多いことは非常に重要です。私たちは、あなたのスキルや希望に合った多様な求人を提供することで、最適な職場環境を見つけるお手伝いをします。
+                あなたの理想のキャリアを、私たちの豊富な求人情報とともに実現しましょう。まずはお気軽にご相談ください！
+              </p>
+
+            </Card>
           </FadeIn>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <FadeIn key={index} delay={300 + index * 100}>
-              <Card className="overflow-hidden h-full group hover:shadow-lg transition-shadow duration-300">
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <Button variant="outline" className="rounded-full group mt-3 transition-all">
-                    <span>Learn more</span>
-                    <svg 
-                      className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" 
-                      fill="none" 
-                      viewBox="0 0 24 24" 
-                      stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </Button>
-                </div>
-              </Card>
-            </FadeIn>
-          ))}
-        </div>
-        
-        <FadeIn delay={600} className="mt-16 text-center">
-          <Button size="lg" className="rounded-full px-8">
-            View All Services
-          </Button>
-        </FadeIn>
       </div>
     </section>
   );

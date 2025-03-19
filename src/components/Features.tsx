@@ -4,28 +4,9 @@ import { AnimatedImage } from './AnimatedImage';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const features = [
-  {
-    title: 'キャリア成長',
-    description: '継続的な学習と成長の機会を提供し、あなたのキャリアをサポートします。',
-    icon: '✨',
-  },
-  {
-    title: 'チームワーク',
-    description: '協力的な環境で共に成功を目指し、お互いをサポートします。',
-    icon: '⚡',
-  },
-  {
-    title: '革新的な環境',
-    description: '創造性と革新を育む環境で、最新の技術と方法論を活用します。',
-    icon: '📈',
-  },
-  {
-    title: 'ワークライフバランス',
-    description: '健全な仕事と生活のバランスを重視し、柔軟な働き方を提供します。',
-    icon: '🔒',
-  },
-];
+// 特徴セクションは現在非表示
+const features = [];
+
 
 export default function Features() {
   return (
@@ -34,42 +15,24 @@ export default function Features() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <FadeIn>
             <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-gray-700 uppercase bg-gray-100 rounded-full">
-              えもびの魅力
+              お客様の声
             </span>
           </FadeIn>
           
           <FadeIn delay={100}>
             <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl text-primary">
-              当社で働くことの特典
+              お客様からの評価
             </h2>
           </FadeIn>
           
           <FadeIn delay={200}>
             <p className="mt-4 text-lg text-gray-600">
-              私たちはチームメンバーの成長と幸福を大切にしています。共に成長し、革新的なサービスを提供しましょう。
+              Hustarのサービスをご利用いただいたお客様からの声をご紹介します。
             </p>
           </FadeIn>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <FadeIn 
-              key={index} 
-              delay={300 + index * 100} 
-              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                <span className="text-2xl">{feature.icon}</span>
-              </div>
-              <h3 className="text-xl font-semibold text-primary mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
-            </FadeIn>
-          ))}
-        </div>
+
         
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <FadeIn direction="right">
@@ -122,12 +85,7 @@ export default function Features() {
               </ul>
             </FadeIn>
             
-            <FadeIn delay={400}>
-              <Button className="mt-6 rounded-full group">
-                <span>もっと詳しく</span>
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </FadeIn>
+
           </div>
         </div>
       </div>

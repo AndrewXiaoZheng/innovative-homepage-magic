@@ -23,12 +23,10 @@ export default function Header() {
   }, []);
   
   const navLinks = [
-    { name: 'えもびとは？', href: '#about' },
-    { name: 'What\'s new', href: '#news' },
-    { name: 'えもびの魅力', href: '#features' },
-    { name: 'えもび旅の1日', href: '#day' },
-    { name: 'お客様の声', href: '#testimonials' },
-    { name: '予約する', href: '#contact' },
+    { name: 'Hustarについて', href: '#about' },
+    { name: 'Service', href: '#services' },
+    { name: 'ご利用の流れ', href: '#flow' },
+    { name: 'Contact Us', href: '#contact' },
   ];
   
   return (
@@ -56,11 +54,8 @@ export default function Header() {
             
             {/* Logo */}
             <a href="#" className="flex items-center mx-8">
-              <span className="text-3xl font-semibold tracking-tight text-primary mr-1">
-                E
-              </span>
-              <span className="text-2xl font-medium tracking-tight text-primary">
-                mobi
+              <span className="text-3xl font-semibold tracking-tight text-primary">
+                Hustar
               </span>
             </a>
             
@@ -79,7 +74,7 @@ export default function Header() {
           <div className="md:hidden flex items-center justify-between w-full">
             <a href="#" className="flex items-center">
               <span className="text-2xl font-semibold tracking-tight text-primary">
-                Emobi
+                Hustar
               </span>
             </a>
             <button

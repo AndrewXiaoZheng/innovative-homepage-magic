@@ -42,13 +42,13 @@ export default function DayInLife() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <FadeIn>
             <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-gray-700 uppercase bg-gray-100 rounded-full">
-              えもび旅の1日
+              Hustar
             </span>
           </FadeIn>
           
           <FadeIn delay={100}>
             <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl text-primary">
-              えもびでの1日の流れ
+              Hustarでの1日の流れ
             </h2>
           </FadeIn>
           
@@ -90,13 +90,7 @@ export default function DayInLife() {
           </div>
         </div>
         
-        <div className="mt-16 text-center">
-          <FadeIn delay={300}>
-            <Button size="lg" className="rounded-full px-8">
-              採用情報を見る
-            </Button>
-          </FadeIn>
-        </div>
+
       </div>
     </section>
   );

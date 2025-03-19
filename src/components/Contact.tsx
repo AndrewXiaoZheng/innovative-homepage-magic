@@ -1,15 +1,12 @@
 
 import { FadeIn } from './FadeIn';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Contact() {
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="max-w-3xl mx-auto">
           <div className="space-y-8">
             <FadeIn>
               <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-blue-600 uppercase bg-blue-50 rounded-full">
@@ -76,66 +73,6 @@ export default function Contact() {
               </FadeIn>
             </div>
           </div>
-          
-          <FadeIn direction="left" className="relative">
-            <div className="absolute -top-6 -left-6 w-20 h-20 bg-yellow-100 rounded-full opacity-70 animate-float" />
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-100 rounded-full opacity-70 animate-float" style={{ animationDelay: '1s' }} />
-            
-            <div className="relative bg-white p-8 rounded-2xl shadow-sm">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">
-                      Name
-                    </label>
-                    <Input
-                      id="name"
-                      placeholder="Your name"
-                      className="rounded-lg border-gray-200 focus:border-blue-500 focus:ring-blue-500"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
-                      Email
-                    </label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="Your email"
-                      className="rounded-lg border-gray-200 focus:border-blue-500 focus:ring-blue-500"
-                    />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
-                    Subject
-                  </label>
-                  <Input
-                    id="subject"
-                    placeholder="How can we help you?"
-                    className="rounded-lg border-gray-200 focus:border-blue-500 focus:ring-blue-500"
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    placeholder="Your message..."
-                    rows={4}
-                    className="rounded-lg border-gray-200 focus:border-blue-500 focus:ring-blue-500"
-                  />
-                </div>
-                
-                <Button type="submit" size="lg" className="w-full rounded-full">
-                  Send Message
-                </Button>
-              </form>
-            </div>
-          </FadeIn>
         </div>
       </div>
     </section>
