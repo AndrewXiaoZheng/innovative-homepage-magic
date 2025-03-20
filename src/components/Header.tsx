@@ -42,7 +42,7 @@ export default function Header() {
         <div className="flex items-center justify-center">
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.slice(0, 3).map((link) => (
+            {navLinks.slice(0, 2).map((link) => (
               <a
                 key={link.name}
                 href={link.href}
@@ -59,7 +59,7 @@ export default function Header() {
               </span>
             </a>
             
-            {navLinks.slice(3).map((link) => (
+            {navLinks.slice(2).map((link) => (
               <a
                 key={link.name}
                 href={link.href}
