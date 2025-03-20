@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>重定向中...</title>
+  <script type="text/javascript">
+    // 单页应用的 GitHub Pages 重定向
+    (function() {
+      // 获取当前 URL 路径
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+      var segmentCount = 0;
+      var location = window.location;
+      var origin = location.origin;
+      var pathname = location.pathname;
+      
+      // 项目名称是路径的第一部分
+      var repo = /\/([^\/]+)/.exec(pathname)[1];
+      
+      // 重定向到根目录，并在 URL 中保留路径信息
+      var redirectUrl = origin + '/' + repo + '/?p=' + pathname.slice(('/' + repo).length);
+      
+      localStorage.setItem('redirect_path', pathname.slice(('/' + repo).length));
+      window.location.href = redirectUrl;
+    })();
+  </script>
+</head>
+<body>
+  <p>如果您没有被自动重定向，请<a href="/">点击这里</a>。</p>
+</body>
+</html>
