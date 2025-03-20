@@ -6,13 +6,31 @@
 
 ## GitHub Pages Deployment
 
-This project is configured to be deployed to GitHub Pages. The deployment is automated using GitHub Actions.
+### How to deploy to username.github.io
 
-### How to deploy
+1. **Create a new repository named `username.github.io`**:
+   - Replace `username` with your actual GitHub username
+   - This special repository name will make your site available at the root domain
 
-1. Push your changes to the `main` branch
-2. GitHub Actions will automatically build and deploy your site
-3. Your site will be available at `https://[your-username].github.io/innovative-homepage-magic/`
+2. **Push this project to your new repository**:
+   ```sh
+   # Add the new repository as a remote
+   git remote add github-pages https://github.com/username/username.github.io.git
+   
+   # Push your code to the new repository
+   git push -u github-pages main
+   ```
+
+3. **Enable GitHub Pages in repository settings**:
+   - Go to your repository on GitHub
+   - Navigate to Settings > Pages
+   - Under "Source", select "GitHub Actions" from the dropdown menu
+   - Save the settings
+
+4. GitHub Actions will automatically build and deploy your site
+5. Your site will be available at `https://username.github.io/`
+
+**Note**: The vite.config.ts has been updated to use root path (`base: "/"`) for this deployment method.
 
 ## How can I edit this code?
 

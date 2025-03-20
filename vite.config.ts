@@ -5,8 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({  
-  // 设置基本公共路径，用于GitHub Pages部署
-  base: "/innovative-homepage-magic/",
+  // 设置基本公共路径，用于GitHub Pages用户名仓库部署
+  base: "/",
   server: {
     host: "::",
     port: 8080,
