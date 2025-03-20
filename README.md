@@ -4,6 +4,16 @@
 
 **URL**: https://lovable.dev/projects/a9113d0a-eba6-40dd-9dc0-187252c87528
 
+## GitHub Pages Deployment
+
+This project is configured to be deployed to GitHub Pages. The deployment is automated using GitHub Actions.
+
+### How to deploy
+
+1. Push your changes to the `main` branch
+2. GitHub Actions will automatically build and deploy your site
+3. Your site will be available at `https://[your-username].github.io/innovative-homepage-magic/`
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
