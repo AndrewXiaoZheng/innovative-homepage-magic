@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom"; // 添加HashRouter
 import { useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -30,18 +30,19 @@ const GitHubPagesRedirect = () => {
   return null;
 };
 
+// 修改为使用HashRouter而不是BrowserRouter
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/innovative-homepage-magic">
+      <HashRouter>
         <Routes>
-          <Route path="/" element={<><GitHubPagesRedirect /><Index /></>} />
+          <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );

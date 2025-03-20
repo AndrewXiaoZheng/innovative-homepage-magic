@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({  
-  // 修改为项目仓库名称
+  // 确保base路径正确
   base: "/innovative-homepage-magic/",
   server: {
     host: "::",
