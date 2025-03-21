@@ -4,32 +4,32 @@ import { Button } from '@/components/ui/button';
 export default function Flow() {
   const steps = [
     {
-      number: "①",
+      number: "ステップ１",
       title: "お問い合わせ",
       description: "まず担当者よりご連絡させていただきます。こちらよりお問い合わせください。（基本LINEでご連絡可能です♪）"
     },
     {
-      number: "②",
+      number: "ステップ２",
       title: "お打ち合わせ",
       description: "基本情報含めて、転職の希望をヒアリングさせていただきます。もちろん決まっていなくてもまずは相談からでも可能です。"
     },
     {
-      number: "③",
+      number: "ステップ３",
       title: "企業の紹介",
       description: "お伺いした希望をもとに、企業の求人をご紹介します。"
     },
     {
-      number: "④",
+      number: "ステップ４",
       title: "書類添削、面接対策",
       description: "エントリーする際の書類を添削させていただき、面接時のポイントをお伝えさせていただきます。"
     },
     {
-      number: "⑤",
+      number: "ステップ５",
       title: "面接設定",
       description: "企業人事との面接を設定します。"
     },
     {
-      number: "⑥",
+      number: "ステップ６",
       title: "入社前後のフォロー",
       description: "入社前後のフォローもこちらでサポートさせていただきます。"
     }
@@ -79,7 +79,7 @@ export default function Flow() {
                   </div>
                   
                   <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white relative z-10">
-                    <span className="text-sm font-bold">{step.number}</span>
+                    <span className="text-sm font-bold">{index + 1}</span>
                   </div>
                   
                   <div className="md:w-1/2"></div>
