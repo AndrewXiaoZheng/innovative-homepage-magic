@@ -39,13 +39,13 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 'Hustarについて',
-                'チーム紹介',
+                // 'チーム紹介',
                 'サービス',
                 'お問い合わせ',
               ].map((item, index) => (
                 <li key={item}>
                   <a
-                    href={['#about', '#team', '#services', '#contact'][index]}
+                    href={['#about', '#services', '#contact'][index]}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {item}
