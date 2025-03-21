@@ -9,7 +9,7 @@ export default function Hero() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(/lovable-uploads/a65f08fa-0022-4f78-97ce-03a8255dba93.png)', 
+            backgroundImage: 'url(/innovative-homepage-magic/images/hero-bg.png)', 
             backgroundPosition: 'center',
           }}
         >
