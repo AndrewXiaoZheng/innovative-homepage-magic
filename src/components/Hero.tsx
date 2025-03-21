@@ -9,8 +9,9 @@ export default function Hero() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(/innovative-homepage-magic/images/hero-bg.png)', 
+            backgroundImage: 'url(/innovative-homepage-magic/images/Image1.jpeg)', 
             backgroundPosition: 'center',
+            backgroundSize: 'cover'
           }}
         >
           <div className="absolute inset-0 bg-black/30" />

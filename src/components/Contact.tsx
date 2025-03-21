@@ -9,20 +9,20 @@ export default function Contact() {
         <div className="max-w-3xl mx-auto">
           <div className="space-y-8">
             <FadeIn>
-              <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-blue-600 uppercase bg-blue-50 rounded-full">
-                Get in Touch
+              <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-primary uppercase bg-blue-50 rounded-full">
+                お問い合わせ
               </span>
             </FadeIn>
             
             <FadeIn delay={100}>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-primary">
-                Let's Start a Conversation
+                お気軽にご相談ください
               </h2>
             </FadeIn>
             
             <FadeIn delay={200}>
               <p className="text-lg text-muted-foreground">
-                Have a project in mind or just want to learn more about our services? We'd love to hear from you. Fill out the form and we'll get back to you soon.
+                キャリアに関するご質問やサービスについてもっと知りたい方は、お気軽にお問い合わせください。担当者が丁寧にご対応いたします。
               </p>
             </FadeIn>
             
@@ -30,13 +30,13 @@ export default function Contact() {
               <FadeIn delay={300}>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 bg-white p-3 rounded-full shadow-sm">
-                    <Mail className="h-6 w-6 text-blue-600" />
+                    <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium">Email Us</h3>
-                    <p className="mt-1 text-muted-foreground">Our friendly team is here to help.</p>
-                    <a href="mailto:hello@example.com" className="mt-2 inline-block text-blue-600 hover:text-blue-800 transition-colors">
-                      hello@example.com
+                    <h3 className="text-lg font-medium">メールでのお問い合わせ</h3>
+                    <p className="mt-1 text-muted-foreground">担当者が丁寧にご対応いたします。</p>
+                    <a href="mailto:yuta.izawa@aihustar.net" className="mt-2 inline-block text-primary hover:text-primary/80 transition-colors">
+                      yuta.izawa@aihustar.net
                     </a>
                   </div>
                 </div>
@@ -45,13 +45,13 @@ export default function Contact() {
               <FadeIn delay={400}>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 bg-white p-3 rounded-full shadow-sm">
-                    <MapPin className="h-6 w-6 text-blue-600" />
+                    <MapPin className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium">Visit Us</h3>
-                    <p className="mt-1 text-muted-foreground">Come and say hello at our office.</p>
+                    <h3 className="text-lg font-medium">オフィス所在地</h3>
+                    <p className="mt-1 text-muted-foreground">お気軽にお立ち寄りください。</p>
                     <p className="mt-2 text-sm">
-                      123 Design Street, Tokyo, Japan
+                      〒100-0004 東京都千代田区大手町1-6-1 大手町ビル1F/2F
                     </p>
                   </div>
                 </div>
@@ -60,13 +60,13 @@ export default function Contact() {
               <FadeIn delay={500}>
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 bg-white p-3 rounded-full shadow-sm">
-                    <Phone className="h-6 w-6 text-blue-600" />
+                    <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium">Call Us</h3>
-                    <p className="mt-1 text-muted-foreground">Mon-Fri from 8am to 5pm.</p>
-                    <a href="tel:+1234567890" className="mt-2 inline-block text-blue-600 hover:text-blue-800 transition-colors">
-                      +1 (234) 567-890
+                    <h3 className="text-lg font-medium">お電話でのお問い合わせ</h3>
+                    <p className="mt-1 text-muted-foreground">平日9:00〜18:00で対応しております。</p>
+                    <a href="tel:08034018956" className="mt-2 inline-block text-primary hover:text-primary/80 transition-colors">
+                      080-3401-8956
                     </a>
                   </div>
                 </div>

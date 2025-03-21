@@ -11,9 +11,9 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <FadeIn className="space-y-6">
-            <h3 className="text-xl font-semibold">eMobi</h3>
+            <h3 className="text-xl font-semibold">Hustar</h3>
             <p className="text-gray-400">
-              Creating exceptional digital experiences through innovative design and technology solutions.
+              キャリアの可能性を広げ、あなたの未来をサポートします。
             </p>
             <div className="flex space-x-4">
               {[
@@ -25,7 +25,7 @@ export default function Footer() {
                 <a
                   key={social}
                   href="#"
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors"
+                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
                 >
                   <span className="sr-only">{social}</span>
                   <div className="w-5 h-5" />
@@ -35,17 +35,17 @@ export default function Footer() {
           </FadeIn>
           
           <FadeIn delay={100} className="space-y-6">
-            <h3 className="text-lg font-semibold">Company</h3>
+            <h3 className="text-lg font-semibold">会社情報</h3>
             <ul className="space-y-3">
               {[
-                'About Us',
-                'Our Team',
-                'Careers',
-                'Press',
-              ].map((item) => (
+                'Hustarについて',
+                'チーム紹介',
+                'サービス',
+                'お問い合わせ',
+              ].map((item, index) => (
                 <li key={item}>
                   <a
-                    href="#"
+                    href={['#about', '#team', '#services', '#contact'][index]}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {item}
@@ -56,18 +56,18 @@ export default function Footer() {
           </FadeIn>
           
           <FadeIn delay={200} className="space-y-6">
-            <h3 className="text-lg font-semibold">Services</h3>
+            <h3 className="text-lg font-semibold">サービス</h3>
             <ul className="space-y-3">
               {[
-                'Web Development',
-                'Mobile Applications',
-                'UI/UX Design',
-                'Digital Marketing',
-                'Cloud Solutions',
+                'キャリアコンサルティング',
+                '転職サポート',
+                '面接対策',
+                '書類添削',
+                'キャリア研修',
               ].map((item) => (
                 <li key={item}>
                   <a
-                    href="#"
+                    href="#services"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {item}
@@ -78,17 +78,17 @@ export default function Footer() {
           </FadeIn>
           
           <FadeIn delay={300} className="space-y-6">
-            <h3 className="text-lg font-semibold">Newsletter</h3>
+            <h3 className="text-lg font-semibold">お問い合わせ</h3>
             <p className="text-gray-400">
-              Subscribe to our newsletter to receive updates and insights.
+              キャリアに関するご相談は、お気軽にお問い合わせください。
             </p>
-            <div className="flex space-x-2">
-              <Input
-                placeholder="Your email"
-                className="bg-gray-800 border-gray-700 focus:border-blue-500 text-white"
-              />
-              <Button variant="secondary">
-                Subscribe
+            <div className="space-y-2">
+              <p className="text-gray-400">
+                <span className="block">メール: yuta.izawa@aihustar.net</span>
+                <span className="block">電話: 080-3401-8956</span>
+              </p>
+              <Button variant="secondary" asChild>
+                <a href="#contact">お問い合わせ</a>
               </Button>
             </div>
           </FadeIn>
@@ -96,13 +96,13 @@ export default function Footer() {
         
         <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} eMobi. All rights reserved.
+            © {currentYear} Hustar. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             {[
-              'Privacy Policy',
-              'Terms of Service',
-              'Cookie Policy',
+              'プライバシーポリシー',
+              '利用規約',
+              'サイトマップ',
             ].map((item) => (
               <a
                 key={item}
