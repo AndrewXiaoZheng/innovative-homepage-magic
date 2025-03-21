@@ -15,7 +15,7 @@
       var repo = 'innovative-homepage-magic';
       
       // 使用哈希路由而不是查询参数
-      var path = pathname.slice(('/' + repo).length) || '/';
+      var path = pathname.replace(new RegExp('^\/' + repo + '(\/|$)'), '/') || '/';
       var redirectUrl = origin + '/' + repo + '/#' + path;
       
       // 存储重定向路径以备后用
@@ -25,6 +25,6 @@
   </script>
 </head>
 <body>
-  <p>如果您没有被自动重定向，请<a href="/">点击这里</a>。</p>
+  <p>如果您没有被自动重定向，请<a href="/innovative-homepage-magic/">点击这里</a>。</p>
 </body>
 </html>
