@@ -51,7 +51,9 @@ export default function Contact() {
                     <h3 className="text-lg font-medium">オフィス所在地</h3>
                     <p className="mt-1 text-muted-foreground">お気軽にお立ち寄りください。</p>
                     <p className="mt-2 text-sm">
-                      〒100-0004 東京都千代田区大手町1-6-1 大手町ビル1F/2F
+                      〒100-0004<br />
+                      東京都千代田区大手町1-6-1<br />
+                      大手町ビル1F/2F
                     </p>
                   </div>
                 </div>

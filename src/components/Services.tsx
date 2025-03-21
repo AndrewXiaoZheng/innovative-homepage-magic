@@ -17,7 +17,7 @@ export default function Services() {
           
           <FadeIn delay={100}>
             <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl text-primary">
-              人材紹介サービス
+              サービス
             </h2>
           </FadeIn>
         </div>
