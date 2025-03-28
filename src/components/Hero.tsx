@@ -23,7 +23,7 @@ export default function Hero() {
             <FadeIn delay={300}>
               <div className="flex justify-center">
                 <img 
-                  src="/innovative-homepage-magic/images/image_logo_w1.png" 
+                  src="/innovative-homepage-magic/images/image_logo_w1.svg" 
                   alt="Hustar Logo" 
                   className="h-24 md:h-32 w-auto" 
                 />
