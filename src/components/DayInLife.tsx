@@ -47,9 +47,13 @@ export default function DayInLife() {
           </FadeIn>
           
           <FadeIn delay={100}>
-            <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl text-primary">
-              Hustarでの1日の流れ
-            </h2>
+              <div className="mt-6 flex justify-center">
+                <img 
+                  src="/innovative-homepage-magic/images/image_logo.png" 
+                  alt="Hustar Logo" 
+                  className="h-16 w-auto" 
+                />
+              </div>
           </FadeIn>
           
           <FadeIn delay={200}>

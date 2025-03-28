@@ -11,7 +11,13 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <FadeIn className="space-y-6">
-            <h3 className="text-xl font-semibold">Hustar</h3>
+            <div className="mb-2">
+              <img 
+                src="/innovative-homepage-magic/images/image_logo.png" 
+                alt="Hustar Logo" 
+                className="h-10 w-auto" 
+              />
+            </div>
             <p className="text-gray-400">
               キャリアの可能性を広げ、あなたの未来をサポートします。
             </p>

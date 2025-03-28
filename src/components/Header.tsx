@@ -54,9 +54,11 @@ export default function Header() {
             
             {/* Logo */}
             <a href="#" className="flex items-center mx-8">
-              <span className="text-3xl font-semibold tracking-tight text-primary">
-                Hustar
-              </span>
+              <img 
+                src="/innovative-homepage-magic/images/image_logo.png" 
+                alt="Hustar Logo" 
+                className="h-16 w-auto" 
+              />
             </a>
             
             {navLinks.slice(2).map((link) => (
@@ -73,9 +75,11 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center justify-between w-full">
             <a href="#" className="flex items-center">
-              <span className="text-2xl font-semibold tracking-tight text-primary">
-                Hustar
-              </span>
+              <img 
+                src="/innovative-homepage-magic/images/image_logo.png" 
+                alt="Hustar Logo" 
+                className="h-12 w-auto" 
+              />
             </a>
             <button
               className="flex items-center"

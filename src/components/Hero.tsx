@@ -21,9 +21,13 @@ export default function Hero() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <FadeIn delay={300}>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6">
-              Hustar
-              </h1>
+              <div className="flex justify-center">
+                <img 
+                  src="/innovative-homepage-magic/images/image_logo.png" 
+                  alt="Hustar Logo" 
+                  className="h-24 md:h-32 w-auto" 
+                />
+              </div>
             </FadeIn>
           </div>
         </div>
