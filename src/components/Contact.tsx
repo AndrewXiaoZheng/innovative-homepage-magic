@@ -66,7 +66,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium">お電話でのお問い合わせ</h3>
-                    <p className="mt-1 text-muted-foreground">平日9:00〜18:00で対応しております。</p>
+                    <p className="mt-1 text-muted-foreground">平日9:00〜20:00で対応しております。</p>
                     <a href="tel:08034018956" className="mt-2 inline-block text-primary hover:text-primary/80 transition-colors">
                       080-3401-8956
                     </a>
