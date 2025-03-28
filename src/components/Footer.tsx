@@ -13,7 +13,7 @@ export default function Footer() {
           <FadeIn className="space-y-6">
             <div className="mb-2">
               <img 
-                src="/innovative-homepage-magic/images/image_logo.png" 
+                src="/innovative-homepage-magic/images/image_logo_w.png" 
                 alt="Hustar Logo" 
                 className="h-10 w-auto" 
               />

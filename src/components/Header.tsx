@@ -57,7 +57,7 @@ export default function Header() {
               <img 
                 src="/innovative-homepage-magic/images/image_logo.png" 
                 alt="Hustar Logo" 
-                className="h-16 w-auto" 
+                className="h-10 w-auto" 
               />
             </a>
             
@@ -76,9 +76,9 @@ export default function Header() {
           <div className="md:hidden flex items-center justify-between w-full">
             <a href="#" className="flex items-center">
               <img 
-                src="/innovative-homepage-magic/images/image_logo.png" 
+                src="/innovative-homepage-magic/images/image_logo_w.png" 
                 alt="Hustar Logo" 
-                className="h-12 w-auto" 
+                className="h-8 w-auto" 
               />
             </a>
             <button
