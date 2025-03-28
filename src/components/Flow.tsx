@@ -6,7 +6,7 @@ export default function Flow() {
     {
       number: "ステップ１",
       title: "お問い合わせ",
-      description: "まず担当者よりご連絡させていただきます。こちらよりお問い合わせください。（基本LINEでご連絡可能です♪）"
+      description: "まず担当者よりご連絡させていただきます。こちらよりお問い合わせください。(基本LINEでご連絡可能です♪)"
     },
     {
       number: "ステップ２",
