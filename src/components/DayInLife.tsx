@@ -67,7 +67,7 @@ export default function DayInLife() {
           {/* Timeline */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
           
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {activities.map((activity, index) => (
               <FadeIn 
                 key={index} 
@@ -75,11 +75,19 @@ export default function DayInLife() {
                 direction={index % 2 === 0 ? "right" : "left"}
               >
                 <div className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                  <div className="md:w-1/2 p-6 flex justify-center">
-                    <div className="bg-gray-100 p-6 rounded-xl shadow-sm w-full max-w-md">
-                      <div className="text-xl font-bold text-primary mb-2">{activity.time}</div>
-                      <h3 className="text-lg font-semibold mb-3">{activity.title}</h3>
-                      <p className="text-gray-600">{activity.description}</p>
+                  {/* Mobile time indicator */}
+                  <div className="flex md:hidden items-center mb-3">
+                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white mr-3">
+                      <span className="text-xs font-bold">{index + 1}</span>
+                    </div>
+                    <div className="text-lg font-bold text-primary">{activity.time}</div>
+                  </div>
+                  
+                  <div className="w-full md:w-1/2 px-4 md:p-6 flex justify-center">
+                    <div className="bg-gray-100 p-4 md:p-6 rounded-xl shadow-sm w-full max-w-md">
+                      <div className="hidden md:block text-xl font-bold text-primary mb-2">{activity.time}</div>
+                      <h3 className="text-lg font-semibold mb-2 md:mb-3">{activity.title}</h3>
+                      <p className="text-sm md:text-base text-gray-600">{activity.description}</p>
                     </div>
                   </div>
                   
