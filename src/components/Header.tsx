@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -21,6 +20,18 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
   
   const navLinks = [
     { name: 'Hustarについて', href: '#about' },
@@ -101,65 +112,75 @@ export default function Header() {
           'md:hidden fixed inset-0 bg-black/50 z-[100] transition-opacity duration-300 ease-in-out',
           mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         )}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) setMobileMenuOpen(false);
+        }}
       >
         <div 
           className={cn(
-            'fixed right-0 top-0 bottom-0 w-4/5 bg-white shadow-xl transition-transform duration-300 ease-in-out overflow-y-auto z-[101]',
+            'fixed right-0 top-0 h-screen w-4/5 bg-white shadow-xl transition-transform duration-300 ease-in-out z-[101] flex flex-col',
             mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           )}
         >
-          <div className="p-6 space-y-6">
-            <div className="flex justify-between items-center mb-6">
-              <img 
-                src="/innovative-homepage-magic/images/image_logo.png" 
-                alt="Hustar Logo" 
-                className="h-8 w-auto" 
-              />
-              <button 
-                onClick={() => setMobileMenuOpen(false)}
-                className="p-2 rounded-full hover:bg-gray-100"
-              >
-                <X className="h-6 w-6 text-primary" />
-              </button>
+          <div className="flex flex-col h-full overflow-y-auto">
+            <div className="sticky top-0 z-10 bg-white p-6 border-b">
+              <div className="flex justify-between items-center">
+                <img 
+                  src="/innovative-homepage-magic/images/image_logo.png" 
+                  alt="Hustar Logo" 
+                  className="h-8 w-auto" 
+                />
+                <button 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 rounded-full hover:bg-gray-100"
+                >
+                  <X className="h-6 w-6 text-primary" />
+                </button>
+              </div>
             </div>
             
-            <nav className="flex flex-col space-y-6 w-full">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-lg font-medium text-gray-800 hover:text-primary py-2 border-b border-gray-100 block w-full"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
-              ))}
-            </nav>
+            <div className="flex-1 p-6 overflow-y-auto">
+              <nav className="flex flex-col space-y-6 w-full">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-lg font-medium text-gray-800 hover:text-primary py-2 border-b border-gray-100 block w-full"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </nav>
 
-            <div className="mt-8 pt-6 border-t border-gray-100">
-              <h3 className="text-lg font-semibold mb-4 text-gray-800">クイックナビゲーション</h3>
-              <div className="grid grid-cols-2 gap-3">
-                <Button variant="outline" asChild className="justify-start hover:bg-gray-100 active:bg-gray-200">
-                  <a href="#about" onClick={() => setMobileMenuOpen(false)} className="w-full py-2">
-                    <span className="block">Hustarについて</span>
-                  </a>
-                </Button>
-                <Button variant="outline" asChild className="justify-start hover:bg-gray-100 active:bg-gray-200">
-                  <a href="#services" onClick={() => setMobileMenuOpen(false)} className="w-full py-2">
-                    <span className="block">サービス</span>
-                  </a>
-                </Button>
-                <Button variant="outline" asChild className="justify-start hover:bg-gray-100 active:bg-gray-200">
-                  <a href="#flow" onClick={() => setMobileMenuOpen(false)} className="w-full py-2">
-                    <span className="block">ご利用の流れ</span>
-                  </a>
-                </Button>
-                <Button variant="outline" asChild className="justify-start hover:bg-gray-100 active:bg-gray-200">
-                  <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="w-full py-2">
-                    <span className="block">お問い合わせ</span>
-                  </a>
-                </Button>
+              <div className="mt-8 pt-6 border-t border-gray-100">
+                <h3 className="text-lg font-semibold mb-4 text-gray-800">クイックナビゲーション</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  <Button variant="outline" asChild className="justify-start hover:bg-gray-100 active:bg-gray-200">
+                    <a href="#about" onClick={() => setMobileMenuOpen(false)} className="w-full py-2">
+                      <span className="block">Hustarについて</span>
+                    </a>
+                  </Button>
+                  <Button variant="outline" asChild className="justify-start hover:bg-gray-100 active:bg-gray-200">
+                    <a href="#services" onClick={() => setMobileMenuOpen(false)} className="w-full py-2">
+                      <span className="block">サービス</span>
+                    </a>
+                  </Button>
+                  <Button variant="outline" asChild className="justify-start hover:bg-gray-100 active:bg-gray-200">
+                    <a href="#flow" onClick={() => setMobileMenuOpen(false)} className="w-full py-2">
+                      <span className="block">ご利用の流れ</span>
+                    </a>
+                  </Button>
+                  <Button variant="outline" asChild className="justify-start hover:bg-gray-100 active:bg-gray-200">
+                    <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="w-full py-2">
+                      <span className="block">お問い合わせ</span>
+                    </a>
+                  </Button>
+                </div>
               </div>
+              
+              {/* Add padding at the bottom to ensure all content is accessible */}
+              <div className="py-6"></div>
             </div>
           </div>
         </div>
